@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ca9ddf5-92ce-4f74-8e52-74b248fa6eca" name="Changes" comment="website displays boxed image">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/text_detector.py" afterDir="false" />
-    </list>
+    <list default="true" id="6ca9ddf5-92ce-4f74-8e52-74b248fa6eca" name="Changes" comment="updated for cloud" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,21 +43,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Flask server.boxedImageWesite.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Flask server.boxedImageWesite.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "cloud",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="boxedImageWebsite" />
@@ -252,7 +248,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732031128679</updated>
       <workItem from="1732031130024" duration="582000" />
-      <workItem from="1732139571179" duration="6029000" />
+      <workItem from="1732139571179" duration="6590000" />
     </task>
     <task id="LOCAL-00001" summary="website displays boxed image">
       <option name="closed" value="true" />
@@ -262,7 +258,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732144529529</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="website saves the images to google storage">
+      <option name="closed" value="true" />
+      <created>1732145658191</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732145658191</updated>
+    </task>
+    <task id="LOCAL-00003" summary="updated for cloud">
+      <option name="closed" value="true" />
+      <created>1732145766564</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732145766564</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +282,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="website displays boxed image" />
-    <option name="LAST_COMMIT_MESSAGE" value="website displays boxed image" />
+    <MESSAGE value="website saves the images to google storage" />
+    <MESSAGE value="updated for cloud" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated for cloud" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/boxedImageWebsite$boxedImageWesite.coverage" NAME="boxedImageWesite Coverage Results" MODIFIED="1732145408305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
