@@ -67,6 +67,7 @@ def get_boxed_image(image, title):
         img_with_boxes = draw_bounding_boxes(image_content, texts)
 
         # Upload the image with bounding boxes
+        upload_image(img_with_boxes, title)
 
         return img_with_boxes
     else:
@@ -120,3 +121,18 @@ def draw_bounding_boxes(image_content, texts):
     output_image_stream.seek(0)
 
     return output_image_stream
+
+def upload_image(image_stream, title):
+    _, storage_client = initialize_clients()
+
+    bucket = storage_client.bucket(BUCKET_NAME)
+
+    blob_name = f'{title}__boxed.png'
+    new_blob = bucket.blob(blob_name)
+
+    new_blob.upload_from_file(image_stream, content_type='image/png')
+    logging.info("Saved image with bounding boxes to %s in bucket %s", blob_name, BUCKET_NAME)
+
+    # sets the pointer to the beginning of the stream
+    image_stream.seek(0)
+

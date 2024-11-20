@@ -14,14 +14,13 @@ def upload():
         title = request.form['title']
         image = request.files['image']
 
-        if image and title:
-            boxed_image = get_boxed_image(image, title)
-            if boxed_image:
-                boxed_image_path = f"static/boxed_{title}"
-                with open(boxed_image_path, 'wb') as f:
-                    f.write(boxed_image.read())
-            else:
-                return "No text found in the image."
+        boxed_image = get_boxed_image(image, title)
+        if boxed_image:
+            boxed_image_path = f"static/boxed_{title}"
+            with open(boxed_image_path, 'wb') as f:
+                f.write(boxed_image.read())
+        else:
+            return "No text found in the image."
 
     return render_template('upload.html', processed_image_url=boxed_image_path)
 
