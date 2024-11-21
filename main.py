@@ -11,10 +11,9 @@ def upload():
     boxed_image_url = None
 
     if request.method == 'POST':
-        image_name = request.form['image_name']
         image = request.files['image']
 
-        boxed_image_url = get_boxed_image_url(image, image_name)
+        boxed_image_url = get_boxed_image_url(image)
         if boxed_image_url is None:
             return "No text found in the image."
 

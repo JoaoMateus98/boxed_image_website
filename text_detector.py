@@ -18,8 +18,8 @@ def initialize_clients():
     return vision_client, storage_client
 
 """calls image boxing function and returns the boxed image url"""
-def get_boxed_image_url(image, image_name):
-    logging.info('Processing image {}'.format(image_name))
+def get_boxed_image_url(image):
+    logging.info('Processing image {}'.format(image.filename))
 
     # Convert image to binary data for Vision API
     image.stream.seek(0) # Reset stream pointer to the beginning
@@ -63,7 +63,7 @@ def get_boxed_image_url(image, image_name):
         img_with_boxes = draw_bounding_boxes(image_content, texts)
 
         # Upload the image with bounding boxes
-        new_blob = upload_image(img_with_boxes, image_name)
+        new_blob = upload_image(img_with_boxes, image.filename)
 
         return new_blob.public_url
     else:
@@ -123,11 +123,10 @@ def upload_image(image_stream, image_name):
 
     bucket = storage_client.bucket(BUCKET_NAME)
 
-    blob_name = f'{image_name}__boxed.png'
-    new_blob = bucket.blob(blob_name)
+    new_blob = bucket.blob(image_name)
 
     new_blob.upload_from_file(image_stream, content_type='image/png')
-    logging.info("Saved image with bounding boxes to %s in bucket %s", blob_name, BUCKET_NAME)
+    logging.info("Saved image with bounding boxes to %s in bucket %s", image_name, BUCKET_NAME)
 
     # sets the pointer to the beginning of the stream
     image_stream.seek(0)

@@ -11,10 +11,6 @@
     <div class="container my-5">
         <h1 class="text-center mb-4">Upload Image</h1>
         <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data" class="p-4 shadow rounded bg-light">
-            <div class="mb-3">
-                <label for="image_name" class="form-label">Name Image</label>
-                <input type="text" id="image_name" name="image_name" class="form-control" required>
-            </div>
 
             <div class="mb-3">
                 <label for="image" class="form-label">Choose an Image</label>
