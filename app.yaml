@@ -1,0 +1,5 @@
+runtime: python39
+service: vision-website
+entrypoint: gunicorn -b :$PORT main:app
+env_variables:
+  BUCKET_NAME: "comp-399-vision"
